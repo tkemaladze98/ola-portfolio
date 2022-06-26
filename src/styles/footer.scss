@@ -1,0 +1,15 @@
+.footer{
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    background-color: black;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    h3{
+        color: white;
+        margin: 0px;
+        text-align: center;
+    }
+}

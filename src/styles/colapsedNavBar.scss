@@ -1,0 +1,24 @@
+.collapsed-navbar {
+  position: relative;
+  background-color: rgb(146, 190, 190);
+  min-height: 30px;
+  .menu-icon {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+  }
+  .collapsed-navbar-menu {
+    padding-top: 30px;
+    box-sizing: content-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .nav-page {
+      color: white;
+    }
+    .active {
+      color: blue;
+      border-bottom: 3px solid blue;
+    }
+  }
+}

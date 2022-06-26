@@ -1,0 +1,26 @@
+.navbar {
+  background-color: rgb(146, 190, 190);
+  min-height: 50px;
+  display: flex;
+  .navbar-menu {
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    .nav-page{
+        color: white;
+    }
+    .active{
+        color: blue;
+        border-bottom: 3px solid blue;
+    }
+  }
+  .logo {
+    font-family: "Pacifico", cursive;
+    text-shadow: 10px 10px 7px;
+    width: 30%;
+    margin: 0px;
+    text-align: center;
+  }
+}
+
