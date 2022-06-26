@@ -3,25 +3,21 @@ import { AiOutlineMenu } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import "../../styles/colapsedNavBar.scss";
 
-const CollapsedNavBar = () => {
+const CollapsedNavBar = (props) => {
   const [isMenuClicked, setIsMenuClicked] = useState(false);
-  const [clickedPage, setClickedPage] = useState("Home");
 
   useEffect(() => {
     if (isMenuClicked) {
       const pages = document.querySelectorAll(".nav-page");
       pages.forEach((page) => {
         page.classList.remove("active");
-        if (page.textContent === clickedPage) {
+        if (page.textContent.toLowerCase() === props.clickedPage.toLowerCase()) {
           page.classList.toggle("active");
         }
       });
     }
-  }, [clickedPage, isMenuClicked]);
+  }, [props.clickedPage, isMenuClicked]);
 
-  const handleClickedPage = (e) => {
-    setClickedPage(e.target.textContent);
-  };
 
   const showMenu = () => {
     setIsMenuClicked(!isMenuClicked);
@@ -34,28 +30,28 @@ const CollapsedNavBar = () => {
           <Link
             className="nav-page"
             to="/"
-            onClick={(e) => handleClickedPage(e)}
+            onClick={(e) => props.handleClickedPage(e)}
           >
             Home
           </Link>
           <Link
             className="nav-page"
             to="about"
-            onClick={(e) => handleClickedPage(e)}
+            onClick={(e) => props.handleClickedPage(e)}
           >
             About
           </Link>
           <Link
             className="nav-page"
             to="contact"
-            onClick={(e) => handleClickedPage(e)}
+            onClick={(e) => props.handleClickedPage(e)}
           >
             Contact
           </Link>
           <Link
             className="nav-page"
             to="projects"
-            onClick={(e) => handleClickedPage(e)}
+            onClick={(e) => props.handleClickedPage(e)}
           >
             Projects
           </Link>

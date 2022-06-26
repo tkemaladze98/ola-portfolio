@@ -7,6 +7,7 @@
         text-align: center;
         margin: 0px;
         color: burlywood;
+        word-break: break-all;
         .hand{
             color: rgb(255, 220, 93);
             animation-name: handshake;
@@ -19,6 +20,7 @@
         text-align: center;
         font-size: 20px;
         color: white;
+        word-break: break-all;
     }
 }
 

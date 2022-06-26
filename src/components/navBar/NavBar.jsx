@@ -1,47 +1,44 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "../../styles/navBar.scss";
-const NavBar = () => {
-  const [clickedPage, setClickedPage] = useState("Home");
+const NavBar = (props) => {
 
   useEffect(() => {
     const pages = document.querySelectorAll(".nav-page");
     pages.forEach((page) => {
         page.classList.remove("active")
-      if (page.textContent === clickedPage){
+      if (page.textContent.toLowerCase() === props.clickedPage.toLowerCase()){
         page.classList.toggle("active");
       }
     });
-  }, [clickedPage]);
-  const handleClickedPage = (e) => {
-    setClickedPage(e.target.textContent);
-  };
+  }, [props.clickedPage]);
+  
 
   return (
     <div className="navbar">
       <h1 className="logo">My Portfolio</h1>
       <nav className="navbar-menu">
-        <Link className="nav-page" to="/" onClick={(e) => handleClickedPage(e)}>
+        <Link className="nav-page" to="/" onClick={(e) => props.handleClickedPage(e)}>
           Home
         </Link>
         <Link
           className="nav-page"
           to="about"
-          onClick={(e) => handleClickedPage(e)}
+          onClick={(e) => props.handleClickedPage(e)}
         >
           About
         </Link>
         <Link
           className="nav-page"
           to="contact"
-          onClick={(e) => handleClickedPage(e)}
+          onClick={(e) => props.handleClickedPage(e)}
         >
           Contact
         </Link>
         <Link
           className="nav-page"
           to="projects"
-          onClick={(e) => handleClickedPage(e)}
+          onClick={(e) => props.handleClickedPage(e)}
         >
           Projects
         </Link>
