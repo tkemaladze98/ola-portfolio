@@ -1,0 +1,41 @@
+.homepage {
+    padding: 100px 0px 50px;
+    min-height: 600px;
+    background-image: url("https://media.istockphoto.com/vectors/digital-network-connection-abstract-background-artificial-and-big-vector-id1327483291");
+    background-size: cover;
+    h1{
+        text-align: center;
+        margin: 0px;
+        color: burlywood;
+        .hand{
+            color: rgb(255, 220, 93);
+            animation-name: handshake;
+            animation-duration: 1s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+    }
+    p{
+        text-align: center;
+        font-size: 20px;
+        color: white;
+    }
+}
+
+@keyframes handshake{
+   0%{
+    transform: rotate(-45deg);
+   }
+   25%{
+    transform: rotate(0deg);
+   }
+   50%{
+    transform: rotate(45deg);
+   }
+   75%{
+    transform: rotate(0deg);
+   }
+   100%{
+    transform: rotate(-45deg);
+   }
+}
