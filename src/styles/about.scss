@@ -1,11 +1,24 @@
 .about{
     padding: 100px 0px 50px;
     min-height: 600px;
-    background-image: url("https://static3.bigstockphoto.com/6/3/3/large1500/336269068.jpg");
+    background-image: url("https://st2.depositphotos.com/3343907/7181/i/950/depositphotos_71818631-stock-photo-sticky-note-about-me-concept.jpg");
     background-size: cover;
     p{
         text-align: center;
-        color: rgb(7, 7, 146);
+        color: blue;
         font-size: 20px;
+        word-break: break-all;
+        text-align: center;
+        padding: 0px 15px;
+        font-weight: 500;
+    }
+    .image-container{
+        display: flex;
+        justify-content: center;
+    }
+    img{
+        width: 100%;
+        max-width: 250px;
+        border-radius: 50%;
     }
 }

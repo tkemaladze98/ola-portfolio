@@ -1,0 +1,31 @@
+.contact {
+  background-color: rgb(224, 210, 192);
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 15px 50px;
+  a,div {
+    display: flex;
+    align-items: center;
+    color: black;
+    padding: 0px 10px;
+    margin: 5px 0px;
+    justify-content: flex-start;
+    width: 100%;
+    max-width: 470px;
+    p {
+      word-break: break-all;
+      width: 100%;
+      text-align: center;
+    }
+    .social {
+      font-size: 40px;
+    }
+  }
+  a:hover {
+    background-color: blue;
+    color: white;
+  }
+}

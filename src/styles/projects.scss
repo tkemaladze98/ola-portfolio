@@ -1,0 +1,44 @@
+.projects{
+    background-color: burlywood;
+    div{
+        position: relative;
+        margin: 10px 0px;
+        img{
+            width: 100%;
+        }
+        a{
+            position: absolute;
+            left: 0px;
+            right: 0px;
+            bottom: 50%;
+            margin: auto;
+            max-width: 200px;
+            min-height: 30px;
+            display: none;
+            border: 1px solid black;
+            justify-content: center;
+            align-items: center;
+            color: black;
+        }
+        a:hover{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: none;
+            background-color: rgb(53, 53, 228);
+            color: white;
+        }
+    }
+    div:hover > img{
+        opacity: 0.7;
+    }
+    div:hover > a{
+        display: flex;
+    }
+    div:first-child{
+        margin-top: 0px;
+    }
+    div:last-child{
+        margin-bottom: 0px;
+    }
+}

@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import "../../styles/navBar.scss";
 const NavBar = (props) => {
+  
 
   useEffect(() => {
     const pages = document.querySelectorAll(".nav-page");

@@ -1,9 +1,13 @@
 import React from "react";
-import '../../styles/about.scss'
+import "../../styles/about.scss";
+import profileImage from "../../assets/images/287334533_439244244696063_6866670843920114320_n.jpg";
 
 const About = () => {
   return (
     <div className="about">
+      <div className="image-container">
+        <img src={profileImage} alt="" />
+      </div>
       <p>
         მე ვარ შოთა ტყემალაძე,23 წლის. შესწავლილი მაქვს და კვლავაც ვიღრმავებ
         ცოდნას Front-end მიმართულებით.
