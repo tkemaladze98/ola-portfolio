@@ -3,7 +3,7 @@ import { AiOutlineMenu } from "react-icons/ai";
 import { Link, useLocation } from "react-router-dom";
 import "../../styles/colapsedNavBar.scss";
 
-const CollapsedNavBar = (props) => {
+const CollapsedNavBar = () => {
   const startingPage =
     useLocation().pathname === "/"
       ? "Home"

@@ -1,1 +1,1 @@
-# ola-portfolio
+# this is shota tkemaladze portfolio

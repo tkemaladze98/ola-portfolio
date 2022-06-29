@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import "../../styles/navBar.scss";
 
-const NavBar = (props) => {
+const NavBar = () => {
   const startingPage =
     useLocation().pathname === "/"
       ? "Home"
