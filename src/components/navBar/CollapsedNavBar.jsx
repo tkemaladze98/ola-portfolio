@@ -1,23 +1,31 @@
 import React, { useState, useEffect } from "react";
 import { AiOutlineMenu } from "react-icons/ai";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import "../../styles/colapsedNavBar.scss";
 
 const CollapsedNavBar = (props) => {
+  const startingPage =
+    useLocation().pathname === "/"
+      ? "Home"
+      : window.location.pathname.split("/")[1];
+  const [clickedPage, setClickedPage] = useState(startingPage);
   const [isMenuClicked, setIsMenuClicked] = useState(false);
+
+  const handleClickedPage = (e) => {
+    setClickedPage(e.target.textContent);
+  };
 
   useEffect(() => {
     if (isMenuClicked) {
       const pages = document.querySelectorAll(".nav-page");
       pages.forEach((page) => {
         page.classList.remove("active");
-        if (page.textContent.toLowerCase() === props.clickedPage.toLowerCase()) {
+        if (page.textContent.toLowerCase() === clickedPage.toLowerCase()) {
           page.classList.toggle("active");
         }
       });
     }
-  }, [props.clickedPage, isMenuClicked]);
-
+  }, [clickedPage, isMenuClicked]);
 
   const showMenu = () => {
     setIsMenuClicked(!isMenuClicked);
@@ -30,28 +38,28 @@ const CollapsedNavBar = (props) => {
           <Link
             className="nav-page"
             to="/"
-            onClick={(e) => props.handleClickedPage(e)}
+            onClick={(e) => handleClickedPage(e)}
           >
             Home
           </Link>
           <Link
             className="nav-page"
             to="about"
-            onClick={(e) => props.handleClickedPage(e)}
+            onClick={(e) => handleClickedPage(e)}
           >
             About
           </Link>
           <Link
             className="nav-page"
             to="contact"
-            onClick={(e) => props.handleClickedPage(e)}
+            onClick={(e) => handleClickedPage(e)}
           >
             Contact
           </Link>
           <Link
             className="nav-page"
             to="projects"
-            onClick={(e) => props.handleClickedPage(e)}
+            onClick={(e) => handleClickedPage(e)}
           >
             Projects
           </Link>

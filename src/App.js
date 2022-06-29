@@ -19,14 +19,10 @@ const getWindowDimensions = () => {
     height: window.innerHeight
   };
 }
-const page = window.location.pathname === "/" ? "Home" : window.location.pathname.split("/")[1]
+
 function App() {
-  const [clickedPage, setClickedPage] = useState(page);
   const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
 
-  const handleClickedPage = (e) => {
-    setClickedPage(e.target.textContent);
-  };
 
   const handleResize = () => {
     setWindowDimensions(getWindowDimensions())
@@ -41,8 +37,8 @@ function App() {
     <div className="App">
       <Router>
         {windowDimensions.width <= 500 ? (
-          <CollapsedNavBar handleClickedPage={handleClickedPage} clickedPage={clickedPage} />
-        ) : (<NavBar handleClickedPage={handleClickedPage} clickedPage={clickedPage} />)}
+          <CollapsedNavBar />
+        ) : (<NavBar />)}
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<About />} />
