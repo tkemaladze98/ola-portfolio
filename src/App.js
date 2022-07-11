@@ -5,13 +5,13 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
-import About from "./components/about/About";
-import HomePage from "./components/homePage/HomePage";
-import Contact from "./components/contact/Contact";
-import Projects from "./components/projects/Projects";
-import NavBar from "./components/navBar/NavBar"
-import CollapsedNavBar from "./components/navBar/CollapsedNavBar"
-import Footer from './components/footer/Footer';
+import About from "./components/About/About";
+import HomePage from "./components/HomePage/HomePage";
+import Contact from "./components/Contact/Contact";
+import Projects from "./components/Projects/Projects";
+import NavBar from "./components/NavBar/NavBar"
+import CollapsedNavBar from "./components/NavBar/CollapsedNavBar"
+import Footer from './components/Footer/Footer';
 
 const getWindowDimensions = () => {
   return {
