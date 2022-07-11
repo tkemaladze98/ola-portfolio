@@ -4,10 +4,9 @@ import { Link, useLocation } from "react-router-dom";
 import "../../styles/colapsedNavBar.scss";
 
 const CollapsedNavBar = () => {
+  const location = useLocation();
   const startingPage =
-    useLocation().pathname === "/"
-      ? "Home"
-      : window.location.pathname.split("/")[1];
+    location.pathname === "/" ? "Home" : location.pathname.split("/")[1];
   const [clickedPage, setClickedPage] = useState(startingPage);
   const [isMenuClicked, setIsMenuClicked] = useState(false);
 

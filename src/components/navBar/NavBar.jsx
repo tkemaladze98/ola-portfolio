@@ -3,10 +3,9 @@ import { Link, useLocation } from "react-router-dom";
 import "../../styles/navBar.scss";
 
 const NavBar = () => {
+  const location = useLocation();
   const startingPage =
-    useLocation().pathname === "/"
-      ? "Home"
-      : window.location.pathname.split("/")[1];
+    location.pathname === "/" ? "Home" : location.pathname.split("/")[1];
   const [clickedPage, setClickedPage] = useState(startingPage);
 
   const handleClickedPage = (e) => {
