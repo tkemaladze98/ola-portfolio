@@ -1,5 +1,4 @@
 import './App.scss'
-import { useEffect, useState } from 'react';
 import {
   BrowserRouter as Router,
   Routes,
