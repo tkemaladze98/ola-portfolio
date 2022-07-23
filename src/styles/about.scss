@@ -1,14 +1,16 @@
 .about{
     padding: 100px 0px 50px;
     min-height: 600px;
-    background-image: url("https://st2.depositphotos.com/3343907/7181/i/950/depositphotos_71818631-stock-photo-sticky-note-about-me-concept.jpg");
+    background-image: url("https://st.depositphotos.com/1620766/4559/v/950/depositphotos_45590179-stock-illustration-about-me-sign.jpg");
     background-size: cover;
+    .text-container{
+        background-color: rgba(0,0,0,0.5);
+    }
     p{
         text-align: center;
-        color: blue;
+        color: rgb(241, 205, 138);
         font-size: 20px;
         word-break: break-all;
-        text-align: center;
         padding: 0px 15px;
         font-weight: 500;
     }

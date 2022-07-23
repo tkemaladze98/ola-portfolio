@@ -12,26 +12,11 @@ import Projects from "./components/Projects/Projects";
 import NavBar from "./components/NavBar/NavBar"
 import CollapsedNavBar from "./components/NavBar/CollapsedNavBar"
 import Footer from './components/Footer/Footer';
+import useWindowSize from "./helpers/useWindowSize";
 
-const getWindowDimensions = () => {
-  return {
-    width: window.innerWidth,
-    height: window.innerHeight
-  };
-}
 
 function App() {
-  const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
-
-
-  const handleResize = () => {
-    setWindowDimensions(getWindowDimensions())
-  }
-
-  useEffect(() => {
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, [windowDimensions]);
+  const windowDimensions = useWindowSize()
 
   return (
     <div className="App">

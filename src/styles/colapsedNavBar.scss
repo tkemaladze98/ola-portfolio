@@ -1,11 +1,12 @@
 .collapsed-navbar {
   position: relative;
   background-color: rgb(146, 190, 190);
-  min-height: 30px;
+  min-height: 50px;
   .menu-icon {
     position: absolute;
     right: 10px;
     top: 10px;
+    font-size: 30px;
   }
   .collapsed-navbar-menu {
     padding-top: 30px;

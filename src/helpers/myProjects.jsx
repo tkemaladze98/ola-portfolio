@@ -7,6 +7,7 @@ import hotelJavascript from "../assets/images/hotelJavascript.png";
 import popUpReact from "../assets/images/popUpReact.png";
 import toDoReact from "../assets/images/toDoReact.png";
 import twitterReact from "../assets/images/twitterReact.png";
+import createTables from "../assets/images/createTables.png";
 
 export const myProjects = [
   {
@@ -44,6 +45,10 @@ export const myProjects = [
   {
     link: "https://ol-academy-imitated-twitter-posts.vercel.app/",
     image: twitterReact,
+  },
+  {
+    link: "https://create-tables-react.netlify.app/",
+    image: createTables,
   },
 ];
 
