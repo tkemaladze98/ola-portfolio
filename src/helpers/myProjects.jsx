@@ -35,15 +35,15 @@ export const myProjects = [
     image: hotelJavascript,
   },
   {
-    link: "https://ol-academy-popup-with-handling-outside-click.vercel.app/",
+    link: "https://popup-handleclick-react.netlify.app/",
     image: popUpReact,
   },
   {
-    link: "https://app.netlify.com/sites/first-react-app-todo/overview",
+    link: "https://first-react-app-todo.netlify.app/",
     image: toDoReact,
   },
   {
-    link: "https://ol-academy-imitated-twitter-posts.vercel.app/",
+    link: "https://twitter-post-imitation.netlify.app/",
     image: twitterReact,
   },
   {
